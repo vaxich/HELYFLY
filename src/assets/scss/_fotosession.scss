@@ -1,0 +1,100 @@
+.fotosession{
+    
+    border-color: $primaryColor;
+    border: 1px solid;
+    color: $textColor;
+    
+    .container{
+        @extend %container;
+    }
+    &__title{
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        margin-top: 28px;
+        text-align: center;
+        max-width: 238px;
+        
+        @include text(26px, 400, 32px, $textColor);
+        @include media(xs) {
+            padding-top: 4px;
+            
+        }
+        @include media(sm) {
+            @include text(20px, 500, 29px, $textColor);
+            padding-top: 28px;
+            margin: 0;
+            justify-content: left;
+        }
+        @include media(md) {
+            @include text(28px, 500, 41px, $textColor);
+            max-width: 300px;
+            padding-top: 70px;
+            
+        }
+        @include media(xl) {
+            @include text(20px, 500, 29px, $textColor);
+            padding-top: 30px;
+            margin-left: -50px;
+        }
+    }
+    &__slider{
+        display: flex;
+        margin-top: 30px;
+        overflow-x: auto;
+        @include media(sm) {
+            overflow-x: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            margin-right: 34px;
+            margin-left: 48px;
+            
+        }
+        @include media(md) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            padding-top: 36px;
+            margin-left: -50px;
+            margin-right: -50px;
+        }
+    }
+    &__img{
+        padding-right: 12px;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    &__link{
+        position: relative;
+        display: none;
+        padding-top: 34px;
+        text-align: center;
+        @include text(17px, 500, 25px, $linkColor);
+        @include media(sm) {
+            display: block;
+        }
+    }
+    &__link::before{
+        content: "";
+        background-image: url(../images/Arrow.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 16px;
+        width: 11px;
+        left: 226px;
+        top: 44px;
+        z-index: 1;
+    }
+    &__link::after{
+        content: "";
+        background-image: url(../images/Arrow.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 16px;
+        width: 11px;
+        right: 228px;
+        top: 44px;
+        z-index: 1;
+    }
+    
+}    

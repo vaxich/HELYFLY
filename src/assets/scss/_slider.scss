@@ -1,0 +1,104 @@
+.slider{
+    
+    border-color: $primaryColor;
+    border: 1px solid;
+    color: $textColor;
+    
+    .container{
+        @extend %container;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 128px;
+        @include media(xs) {
+            margin-top: 96px;
+        }
+    }
+    &__main{
+        width: 205px;
+        
+
+    }
+    &__question{
+        @include text(16px, 500, 23px, $textColor);
+        margin-top: 18px;
+        text-align: center;
+    }
+    &__answer{
+        @include text(14px, 400, 20px, $textColor);
+        margin-top: 5px;
+        text-align: center;
+    }
+    &__fotograph{
+        display: flex;
+        margin-top: 40px;
+        max-width: 218px;
+        width: 100%
+    }
+    &__fotograph-img{
+        width: 67px;
+        height: 67px;
+    }
+    &__block{
+        margin-left: 10px;
+    }
+    &__name{
+        @include text(16px, 600, 20px, $textColor);
+    }
+    &__job{
+        @include text(14px, 400, 21px, $textColor);
+        margin-top: 7px;
+        margin-bottom: 4px;
+    }
+    &__link{
+        @include text(14px, 400, 21px, $linkColor);
+    }
+
+}    
+
+.slick-slide {
+    width: 203px;
+    img { 
+        margin: 0 auto;
+    }
+}
+
+
+.slick-prev::before,
+.slick-next::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 25px;
+    width: 19px;
+    bottom: 25px;
+}
+
+.slick-prev:before {
+    left: 16px;
+    position: absolute;
+    background-image: url(./../images/Arrow-left.png);
+}
+
+.slick-next:before {
+    
+    position: absolute;
+    background-image: url(./../images/Arrow-right.png);
+}
+.slick-dots{
+    bottom: -36px;
+}
+.slick-dots li button:before {
+    font-size: 12px;
+}
+.slick-dots li.slick-active button:before{
+    color:$accentColor;
+}
+// .lick-list.draggable{
+//     max-width: 100px;
+//     max-height: 100px;
+// }

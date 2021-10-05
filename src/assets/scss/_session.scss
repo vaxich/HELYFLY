@@ -1,0 +1,128 @@
+.session{
+    
+    border-color: $primaryColor;
+    border: 1px solid;
+    color: $textColor;
+    
+    .container{
+        @extend %container;
+    }
+    &__wrap{
+        @include media(md) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            
+        }
+        
+}
+    &__title {
+        text-align: center;
+        max-width: 197px;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 14px;
+        @include text(28px, 400, 34px, $textColor);
+        @include media(xs) {
+            max-width: 352px;
+            
+        }
+        @include media(sm) {
+            @include text(40px, 500, 49px, $textColor);
+            max-width: 286px;
+            padding-top: 10px;
+        }
+        @include media(md) {
+            padding-top: 64px;
+            margin-left: -68px;
+        }
+    }
+    &__img{
+        max-width: 290px;
+        @include media(xs) {
+            max-width: 506px;
+        }
+        @include media(sm) {
+            max-width: 668px;
+            padding-top: 20px;
+        }
+        @include media(md) {
+            
+            max-width: 554px;
+            padding-top: 60px;
+            margin-right: -40px;
+        }
+    }
+    &__text {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        @include text(14px, 400, 20px, $textColor);
+        @include media(xs) {
+            
+            @include text(18px, 400, 26px, $textColor);
+        }
+        @include media(sm) {
+            max-width: 475px;
+            padding-top: 10px;
+            padding-bottom: 0px;
+        }
+        @include media(md) {
+            padding-top: 1px;
+            padding-bottom: 14px;
+        }
+        
+    }
+    &__block{
+        @include media(md) {
+            margin-left: -52px;
+        }
+        
+    }
+    &__item{
+        display: flex;
+        margin-bottom: 18px;
+        margin-top: 10px;
+    }
+    &__item-text{
+        @include text(14px, 500, 20px, $textColor);
+        margin-left: 14px;
+        @include media(xs) {
+            margin-top: 8px;
+            margin-left: 8px;
+        }
+    }
+    &__item-img{
+        max-height: 41px;
+    }
+    &__otziv{
+        display: flex;
+        padding-top: 32px;
+        border-top: 1px solid $secondaryColor;
+        border-bottom: 1px solid $secondaryColor;
+    }
+    &__otziv-wrap{
+        padding-left: 30px;
+        @include media(xs) {
+            display: flex;
+            padding-left: 8px;
+            margin-top: 10px;
+        }
+    }
+    &__otziv-litle{
+        @include text(14px, 400, 20px, $textColor);
+        
+        @include media(xs) {
+            padding-right: 12px;
+            @include text(18px, 400, 26px, $textColor);
+        }
+        
+    }
+    &__otziv-big{
+        @include text(14px, 700, 20px, $textColor);
+    }
+    &__2{
+        @include media(md) {
+            grid-area: 1 / 2 / 3 / 3;
+        }
+        
+    }
+}

@@ -1,0 +1,31 @@
+.social{
+    
+    border-color: $primaryColor;
+    border: 1px solid;
+    color: $textColor;
+    
+    .container{
+        @extend %container;
+    }
+    &__wrap{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 76px;
+        @include media(xs) {
+            margin-top: 78px;
+        }
+    }
+    &__img{
+        margin-left: 22px;
+
+    }
+    &__list{
+        margin-bottom: 5px;
+    }
+    &__logo{
+        @include media(xs) {
+            height: 24px;
+        }
+    }
+
+}    

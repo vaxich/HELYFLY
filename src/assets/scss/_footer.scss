@@ -1,0 +1,62 @@
+.footer{
+    
+    border-color: $primaryColor;
+    border: 1px solid;
+    color: $textColor;
+    @include media(xs) {
+        position: relative;
+    }
+    
+    .container{
+        @extend %container;
+    }
+    &__wrap{
+        margin-top: 30px;
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: space-between;
+        @include media(xs) {
+            margin-top: 60px;
+        }
+    }
+    &__lang{
+        margin-right: 14px;
+    }
+    &__img{
+        margin-right: 9px;
+        @include media(xs) {
+            margin-right: 20px;
+        }
+    }
+    &__lang-text{
+        @include text(15px, 400, 18px, $textColor);
+        position: relative;
+    }
+    &__lang-text::after{
+        content: "";
+        background-image: url(../images/card-arrow.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 6px;
+        width: 11px;
+        left: 26px;
+        bottom: 8px;
+        z-index: 1;
+    }
+    &__text{
+        @include text(14px, 400, 14px, $textColorLight);
+        @include media(xs) {
+            text-align: center;
+            position: absolute;
+            left: 40%;
+            top: 50px;
+        }
+    }
+    &__phone{
+        margin-bottom: 14px;
+    }
+    &__copyright{
+        margin-bottom: 20px;
+    }
+
+}

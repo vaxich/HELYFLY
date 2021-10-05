@@ -1,0 +1,142 @@
+.about{
+    
+    border-color: $primaryColor;
+    border: 1px solid;
+    color: $textColor;
+    
+    .container{
+        @extend %container;
+    }
+    &__fotomayker{
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        position: relative;
+        @include media(md) {
+            flex-direction: row-reverse;
+        }
+
+    }
+    &__fotomayker-one{
+        margin-top: 58px;
+        margin-right: 12px;
+        display: flex;
+        flex-direction: column;
+        @include media(xs) {
+            margin-top: 22px;
+        }
+        @include media(sm) {
+            margin-top: 16px;
+        }
+        @include media(md) {
+            padding-left: 200px;
+            padding-top: 10px;
+        }
+    }
+    &__fotomayker-two{
+        @include media(md) {
+            margin-left: -40px;
+            max-width: 568px;
+        }
+    }
+    &__avatar{
+        margin: 0 auto;
+        max-width: 139px;
+        
+        @include media(xs) {
+            padding-top: 32px;
+        }
+        @include media(sm) {
+            padding-top: 76px;
+        }
+    }
+    &__avatar:after{
+        content: "";
+        background-image: url(../images/like.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 27px;
+        width: 31px;
+        right: 1px;
+        top: 2px;
+        z-index: 1;
+    }
+    &__name{
+        text-align: center;
+        margin-top: 24px;
+        margin-bottom: 6px;
+        
+        @include text(18px, 500, 22px, $textColor);
+    }
+    &__job{
+        margin: 0 auto;
+        @include text(14px, 400, 21px, $textColor);
+    }
+    &__link {
+        text-decoration: none;
+        margin: 0 auto;
+        @include text(14px, 500, 21px, $linkColor);
+        padding-top: 10px;
+        
+        text-align: center;
+    }
+    &__link-center{
+        text-decoration: none;
+        @include text(16px, 500, 23px, $linkColor);
+        text-align: left;
+        
+        @include media(xs) {
+            padding-top: 54px;
+        }
+    }
+    &__link-bottom{
+        text-decoration: none;
+        @include text(16px, 500, 23px, $linkColor);
+        text-align: left;
+        margin-top: 32px;
+        display: block;
+        @include media(xs) {
+            padding-top: 12px;
+        }
+    }
+    &__title{
+        @include text(18px, 500, 26px, $textColor);
+        margin-top: 16px;
+        
+        @include media(xs) {
+            padding-top: 24px;
+        }
+        @include media(md) {
+            padding-top: 50px;
+        }
+    }
+    &__title-bottom{
+        @include media(md) {
+            padding-top: 34px;
+        } 
+    }
+    &__text{
+        @include text(16px, 400, 24px, $textColor);
+        
+    }
+    &__text-top{
+        padding-top: 14px;
+    }
+    &__text-center{
+        padding-top: 4px;
+        margin-bottom: 40px;
+        
+        @include media(xs) {
+            padding-top: 26px;
+            margin-bottom: 66px;
+        }
+    }
+    &__title-bottom{
+        padding-top: 10px;
+        margin-bottom: 12px;
+        @include media(xs) {
+            margin-top: 22px;
+        }
+    }
+
+}    

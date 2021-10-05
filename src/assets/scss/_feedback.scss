@@ -1,0 +1,101 @@
+.feedback{
+    
+    border-color: $primaryColor;
+    border: 1px solid;
+    color: $textColor;
+    
+    .container{
+        @extend %container;
+    }
+    &__title{
+        @include text(26px, 400, 36px, $textColor);
+        text-align: center;
+        margin-top: 42px;
+        @include media(sm) {
+            text-align: left;
+        }
+    }
+    &__block{
+        margin-top: 50px;
+        border-bottom: 1px solid $secondaryColor;
+    }
+    &__block-top{
+        display: flex;
+        
+    }
+    &__img{
+        height: 100px;
+        width: 100px;
+    }
+    &__list{
+        margin-left: 18px;
+        margin-top: 5px;
+    }
+    &__name{
+        @include text(16px, 500, 20px, $textColor);
+    }
+    &__job{
+        @include text(14px, 400, 20px, $textColor);
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    &__like-it{
+        position: relative;
+        margin-top: 24px;
+        margin-left: 21px;
+        @include text(14px, 400, 20px, $textColorLight);
+    }
+    &__like-it::before{
+        content: "";
+        background-image: url(../images/Vector.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 18px;
+        width: 15px;
+        left: -20px;
+        z-index: 1;
+    }
+    &__text{
+        @include text(14px, 400, 21px, $textColor);
+        margin-top: 14px;
+    }
+    &__data{
+        @include text(14px, 400, 21px, $textColorLight);
+        margin-top: 40px;
+        padding-bottom: 17px;
+        @include media(xs) {
+            margin-top: 22px;
+        }
+    }
+    &-3{
+        display: none;
+        @include media(xs) {
+            display: block;
+        }
+    }
+    &__link{
+        @include text(17px, 500, 25px, $linkColor);
+        display: block;
+        padding-top: 60px;
+        text-align: center;
+        position: relative;
+        @include media(xs) {
+            padding-top: 138px;
+        }
+        @include media(sm) {
+            padding-top: 28px;
+        }
+    }
+    &__link::after{
+        content: "";
+        background-image: url(../images/feedback-arrow.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 11px;
+        width: 6px;
+        right: 40px;
+        bottom: 8px;
+        z-index: 1;
+    }
+
+}   

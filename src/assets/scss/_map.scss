@@ -1,0 +1,19 @@
+.map{
+    
+    border-color: $primaryColor;
+    border: 1px solid;
+    color: $textColor;
+    &__foto-320{
+        display: block;
+        @include media(xs) {
+            display: none;
+        }
+    }
+    &__foto-576{
+        display: none;
+        @include media(xs) {
+            display: block;
+        }
+    }
+
+} 

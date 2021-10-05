@@ -1,0 +1,156 @@
+.date{
+    
+    border-color: $primaryColor;
+    border: 1px solid;
+    color: $textColor;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+    
+    .container{
+        @extend %container;
+    }
+    &__title{
+        @include text(26px, 400, 32px, $textColor);
+        margin-top: 35px;
+        text-align: center;
+        padding: 0 7px;
+        @include media(xs) {
+            padding: 0 106px;
+            margin-top: 65px;
+        }
+        @include media(sm) {
+            text-align: left;
+            padding: 0;
+            max-width: 50%;
+            @include text(20px, 500, 29px, $textColor);
+        }
+        @include media(md) {
+            @include text(28px, 500, 32px, $textColor);
+            margin-top: 110px;
+            
+            max-width: 43%;
+        }
+        @include media(xl) {
+            @include text(20px, 500, 29px, $textColor);
+            margin-top: 105px;
+        }
+        @include media(xxl) {
+            max-width: 36%;
+        }
+    }
+    &__date--block{
+        border: 1px solid #C7C7C7;
+        margin-top:  40px;
+        text-align: center;
+        @include media(xs) {
+            text-align: left;
+        }
+        @include media(sm) {
+            padding-left: 28px;
+            margin-top: 20px;
+        }
+    }
+    &__date{
+        padding-top: 16px;
+        margin-bottom: 16px;
+        @include text(18px, 400, 26px, $textColor);
+        @include media(xs) {
+            padding-top: 40px;
+            margin-bottom: 8px;
+        }
+        @include media(md) {
+            
+            padding-top: 42px;
+        }
+        @include media(xl) {
+            padding-top: 30px;
+        }
+
+    }
+    &__hour{
+        @include text(18px, 400, 26px, $textColor);
+    }
+    &__one{
+        padding-top: 30px;
+        padding-left: 18px;
+        border-bottom:  1px solid #C7C7C7;
+        border-left: 1px solid #C7C7C7;
+        border-right: 1px solid #C7C7C7;
+        @include media(xs) {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 26px;
+        }
+        @include media(sm) {
+            padding-left: 28px;
+            padding-top: 20px;
+        }
+        @include media(md) {
+            
+            padding-top: 24px;
+        }
+    }
+    &__price{
+        @include text(18px, 600, 22px, $textColor);
+        padding-top: 10px;
+    }
+    &__ostatok{
+        padding-top: 10px;
+        padding-bottom: 24px;
+    }
+    &__btn{
+        @include text(14px, 400, 17px, $accentColor);
+        background-color: $primaryColor;
+        width: 130px;
+        height: 50px;
+        border:2px solid  $accentColor;
+        
+    }
+    &__btn-block{
+        padding-bottom: 28px;
+        @include media(xs) {
+            margin-right: 17px;
+            margin-top: 22px;
+        }
+    }
+    &__otziv{
+        border-bottom:  1px solid #C7C7C7;
+        border-left: 1px solid #C7C7C7;
+        border-right: 1px solid #C7C7C7;
+        display: flex;
+        padding-top: 30px;
+        padding-left: 15px;
+        
+        @include media(md) {
+            padding-bottom: 40px;
+        }
+        
+    }
+    &__otziv-wrap{
+        flex-direction: column;
+        display: flex;
+        padding-left: 16px;
+        padding-top: 2px;
+        @include media(xs) {
+            flex-direction: row;
+        }
+        @include media(sm) {
+            padding-top: 16px;
+        }
+    }
+    &__otziv-litle{
+        @include text(13px, 400, 19px, $textColor);
+        @include media(xs) {
+            @include text(18px, 400, 26px, $textColor);
+        }
+    }
+    &__otziv-big{
+        font-weight: 600;
+    }
+    &__item-img{
+        max-height: 41px;
+    }
+}
